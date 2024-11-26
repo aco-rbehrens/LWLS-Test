@@ -84,6 +84,7 @@ void Build_DevAddr(void)
     Serial1.print(F("\"DevEui\":\""));
     for (int i = 7; i > 0; i--)
     {
+        if (DEVEUI[i] < 0x10) Serial1.print(F("0")); // Ralf
         Serial1.print(DEVEUI[i], HEX);
     }
     Serial1.println("\"");
