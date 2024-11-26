@@ -92,7 +92,8 @@ const lmic_pinmap lmic_pins = {
 	.nss = NSS1,
 	.rxtx = LMIC_UNUSED_PIN,
 	.rst = RESET_RF96,
-	.dio = {6, 12, 7}, /* DIO1, DIO2, DIO3 */
+	//.dio = {6, 12, 7}, /* DIO1, DIO2, DIO3 */
+       .dio = {11, 12, 6}, /* DIO1, DIO2, DIO3 */ // Ralf
 };
 
 extern void Wdt_DoneImpuls(void);
